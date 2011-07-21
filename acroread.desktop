@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Acrobat Reader
+MimeType=application/pdf;
+Exec=acroread %f
+Type=Application
+GenericName=PDF Viewer
+Terminal=false
+Icon=acroread
+X-KDE-StartupNotify=false
