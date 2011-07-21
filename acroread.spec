@@ -25,8 +25,7 @@ Requires:	/usr/lib/gtk-2.0/modules/libpk-gtk-module.so
 Requires:	/usr/lib/gtk-2.0/modules/libatk-bridge.so
 Requires:	/usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
 
-ExclusiveArch:  i486
-BuildArch:	i486
+ExclusiveArch:  %{ix86}
 
 
 %description
