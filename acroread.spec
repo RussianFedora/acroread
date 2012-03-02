@@ -2,7 +2,7 @@
 
 Summary:        Adobe Reader for PDF Files
 Name:           acroread
-Version:        9.4.2
+Version:        9.4.7
 Release:        1%{?dist}.R
 
 URL:            http://www.adobe.com/products/acrobat/readermain.html
@@ -11,8 +11,8 @@ Group:          Applications/Publishing
 Source0:        http://ardownload.adobe.com/pub/adobe/reader/unix/9.x/%{version}/enu/AdbeRdr%{version}-1_i486linux_enu.rpm
 Source10:       acroread.desktop
 Source20:       acroread.png
-Source30:	reader_prefs
-Source31:	adobe.conf
+Source30:       reader_prefs
+Source31:       adobe.conf
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Provides:       libACE.so libACE.so(VERSION) libAGM.so libAGM.so(VERSION)
@@ -20,10 +20,10 @@ Provides:       libBIB.so libBIB.so(VERSION) libBIBUtils.so libBIBUtils.so(VERSI
 Provides:       libCoolType.so libCoolType.so(VERSION) libResAccess.so
 Provides:       libWRServices.so libadobelinguistic.so
 
-Requires:	/usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
-Requires:	/usr/lib/gtk-2.0/modules/libpk-gtk-module.so
-Requires:	/usr/lib/gtk-2.0/modules/libatk-bridge.so
-Requires:	/usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
+Requires:       /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+Requires:       /usr/lib/gtk-2.0/modules/libpk-gtk-module.so
+Requires:       /usr/lib/gtk-2.0/modules/libatk-bridge.so
+Requires:       /usr/lib/gtk-2.0/2.10.0/engines/libclearlooks.so
 
 ExclusiveArch:  %{ix86}
 
@@ -119,6 +119,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Fri Mar 02 2012 Vasiliy N. Glazov <vascom2@gmail.com> - 9.4.7-1.R
+- update to 9.4.7
+
 * Thu Jul 21 2011 Vasiliy N. Glazov <vascom2@gmail.com> - 9.4.2-1.R
 - update to 9.4.2
 
