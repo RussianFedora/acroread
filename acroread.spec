@@ -3,7 +3,7 @@
 Summary:        Adobe Reader for PDF Files
 Name:           acroread
 Version:        9.4.7
-Release:        1%{?dist}
+Release:        1.R
 
 URL:            http://www.adobe.com/products/acrobat/readermain.html
 License:        Any commercial
