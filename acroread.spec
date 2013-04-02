@@ -2,8 +2,8 @@
 
 Summary:        Adobe Reader for PDF Files
 Name:           acroread
-Version:        9.4.7
-Release:        1.R
+Version:        9.5.4
+Release:        1%{dist}
 
 URL:            http://www.adobe.com/products/acrobat/readermain.html
 License:        Any commercial
@@ -13,7 +13,6 @@ Source10:       acroread.desktop
 Source20:       acroread.png
 Source30:       reader_prefs
 Source31:       adobe.conf
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 Provides:       libACE.so libACE.so(VERSION) libAGM.so libAGM.so(VERSION)
 Provides:       libBIB.so libBIB.so(VERSION) libBIBUtils.so libBIBUtils.so(VERSION)
@@ -40,11 +39,11 @@ okular, evince, xpdf, ghostview, ... instead.
 
 
 %package mozplugin
-Summary:	Mozilla plugin for Adobe Reader
-Group:		Applications/Internet
-Requires:	%{name} = %{version}-%{release}
-Requires:	install-nspluginwrapper
-BuildArch:	noarch
+Summary:        Mozilla plugin for Adobe Reader
+Group:          Applications/Internet
+Requires:       %{name} = %{version}-%{release}
+Requires:       install-nspluginwrapper
+BuildArch:      noarch
 
 
 %description mozplugin
@@ -100,12 +99,7 @@ install -m644 %{SOURCE31} %{buildroot}/etc/ld.so.conf.d/
 %postun -p /sbin/ldconfig
 
 
-%clean
-rm -rf %{buildroot}
-
-
 %files 
-%defattr(-,root,root)
 %{_bindir}/acroread
 %{_sysconfdir}/ld.so.conf.d/*.conf
 %{_libdir}/Adobe/*
@@ -114,11 +108,14 @@ rm -rf %{buildroot}
 
 
 %files mozplugin
-%defattr(-,root,root)
 %{_libdir}/mozilla/plugins/nppdf.so
 
 
 %changelog
+* Tue Apr 02 2013 Vasiliy N. Glazov <vascom2@gmail.com> - 9.5.4-1.R
+- update to 9.5.4
+- clean spec
+
 * Fri Mar 02 2012 Vasiliy N. Glazov <vascom2@gmail.com> - 9.4.7-1.R
 - update to 9.4.7
 
