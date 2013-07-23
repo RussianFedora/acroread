@@ -2,7 +2,7 @@
 
 Summary:        Adobe Reader for PDF Files
 Name:           acroread
-Version:        9.5.4
+Version:        9.5.5
 Release:        1%{dist}
 
 URL:            http://www.adobe.com/products/acrobat/readermain.html
@@ -112,6 +112,9 @@ install -m644 %{SOURCE31} %{buildroot}/etc/ld.so.conf.d/
 
 
 %changelog
+* Tue Jul 23 2013 Arkady L. Shane <ashejn@russianfedora.ru> - 9.5.5-1.R
+- update to 9.5.5
+
 * Tue Apr 02 2013 Vasiliy N. Glazov <vascom2@gmail.com> - 9.5.4-1.R
 - update to 9.5.4
 - clean spec
