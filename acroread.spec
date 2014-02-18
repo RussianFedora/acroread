@@ -3,7 +3,7 @@
 Summary:        Adobe Reader for PDF Files
 Name:           acroread
 Version:        9.5.5
-Release:        1%{dist}
+Release:        2%{dist}
 
 URL:            http://www.adobe.com/products/acrobat/readermain.html
 License:        Any commercial
@@ -42,7 +42,7 @@ okular, evince, xpdf, ghostview, ... instead.
 Summary:        Mozilla plugin for Adobe Reader
 Group:          Applications/Internet
 Requires:       %{name} = %{version}-%{release}
-Requires:       install-nspluginwrapper
+Requires:       nspluginwrapper
 BuildArch:      noarch
 
 
@@ -112,6 +112,9 @@ install -m644 %{SOURCE31} %{buildroot}/etc/ld.so.conf.d/
 
 
 %changelog
+* Tue Feb 18 2014 Vasiliy N. Glazov <vascom2@gmail.com> - 9.5.5-2.R
+- correct dependency for mozplugin
+
 * Tue Jul 23 2013 Arkady L. Shane <ashejn@russianfedora.ru> - 9.5.5-1.R
 - update to 9.5.5
 
