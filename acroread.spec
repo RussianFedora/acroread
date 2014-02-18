@@ -42,7 +42,7 @@ okular, evince, xpdf, ghostview, ... instead.
 Summary:        Mozilla plugin for Adobe Reader
 Group:          Applications/Internet
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Requires:       nspluginwrapper
+Requires:       nspluginwrapper.i686
 BuildArch:      noarch
 
 
