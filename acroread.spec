@@ -41,7 +41,7 @@ okular, evince, xpdf, ghostview, ... instead.
 %package mozplugin
 Summary:        Mozilla plugin for Adobe Reader
 Group:          Applications/Internet
-Requires:       %{name} = %{version}-%{release}
+Requires:       %{name}%{?_isa} = %{version}-%{release}
 Requires:       nspluginwrapper
 BuildArch:      noarch
 
